@@ -1,10 +1,25 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-router.get('/', (req, res) => {
-	res.render("home", {
-		meta: req.app.get('meta')
+router.get("/", (req, res) => {
+	res.render("home", { posts: req.app.get("posts") });
+});
+
+router.get("/einstein-and-churchill-both-took-daily-naps", (req, res) => {
+	res.render("article", {
+		article: req.app.get("article"),
+		posts: req.app.get("posts"),
 	});
 });
+
+//router.get("/einstein-and-churchill-both-took-daily-naps", (req, res) => {
+//	res.render("comments", {
+//		comments: req.app.get("comments"),
+//	});
+//});
+
+//router.get("/einstein-and-churchill-both-took-daily-naps", (req, res) => {
+//res.render("article", { posts: req.app.get("posts") });
+//});
 
 module.exports = router;
