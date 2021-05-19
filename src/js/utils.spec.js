@@ -38,7 +38,11 @@ describe("Utils", () => {
 	describe("isArticlePage", () => {
 		it("should match if on article page", () => {
 			const utils = new Utils();
-			window.history.pushState({}, "", "/");
+			window.history.pushState(
+				{},
+				"",
+				"/einstein-and-churchill-both-took-daily-naps"
+			);
 			expect(utils.isArticlePage()).toBeTruthy();
 		});
 
