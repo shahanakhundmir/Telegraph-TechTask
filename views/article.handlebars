@@ -2,45 +2,47 @@
 	<script src="static/app.bundle.js" defer></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Newsreader&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 
 <div class = "container">
 
 		<div class="row">
-			<div class="col-xs-12 col-sm-offset-2 col-sm-7 article__header" style="border-color:blue; border-style:solid; border-width:1px">
+			<div class="col-xs-12 col-sm-offset-2 col-sm-7 article__header">
 				<h1 class="article__title">{{{article.post.title}}}</h1></br>
 				<h2 class="article__stand">{{{article.post.standfirst}}}</h2>
 
 				<!-- TODO truncate date to just date & time -->
-				<p class="article__date">{{{article.post.date}}}</p>
+				<h3 class="article__date">{{{article.post.date}}}</h3>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-xs-12 col-sm-8 article__image" style="border-color:blue; border-style:solid; border-width:1px">
-				<img  src={{{article.post.image}}} alt={{{article.post.title}}} >
+			<div class="col-xs-12 col-sm-8" style="border-color:blue; border-style:solid; border-width:1px">
+				<img  class = "article__image" src={{{article.post.image}}} alt={{{article.post.title}}} >
 			</div>
 
-			<div class="col-xs-12 col-sm-offset-1 col-sm-3 article__stories" style="border-color:blue; border-style:solid; border-width:1px">
+			<div class="col-xs-12 col-sm-offset-1 col-sm-3 article__stories">
 				<h2 class="article__stories-title">More Stories</h2>
-				{{#each posts}} 
-					<h2>ttt</h2>
-					{{this.posts.id}}
+				<!-- loop through posts and display all posts with corresponding id -->
+				{{#each posts}}
+					<div class="row post" >
+						<div class = "col-sm-3" >
+							<img class="post__image" src={{this.thumbnail}} alt={{this.title}} >
+						</div>
+						<div class ="col-sm-9" >
+							<h4 class="post__title">{{this.title}}</h4><br>
+							<h3 style="text-decoration: underline">Read More</h3>
+						</div>
+					</div>	
 				{{/each}}
-
-
-<!--{{#each posts.posts}}
-            {{this.id}}
-            {{this.title}}
-            {{this.thumbnail}}
-            {{/each}} -->
-
+			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-offset-2 col-sm-6 article__body" style="border-color:blue; border-style:solid; border-width:1px"> 
-				<div>{{{post.body}}}</div>
+				<p>{{{article.post.body}}}</p>
 			</div>
 		</div>
 	
@@ -49,6 +51,5 @@
 				<p>This is some comment text</p> 
 			</div>
 		</div>
-
 
 </div>

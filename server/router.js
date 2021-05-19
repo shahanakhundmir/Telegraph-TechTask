@@ -12,14 +12,4 @@ router.get("/einstein-and-churchill-both-took-daily-naps", (req, res) => {
 	});
 });
 
-//router.get("/einstein-and-churchill-both-took-daily-naps", (req, res) => {
-//	res.render("comments", {
-//		comments: req.app.get("comments"),
-//	});
-//});
-
-//router.get("/einstein-and-churchill-both-took-daily-naps", (req, res) => {
-//res.render("article", { posts: req.app.get("posts") });
-//});
-
 module.exports = router;
