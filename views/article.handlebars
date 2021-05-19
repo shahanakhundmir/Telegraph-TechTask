@@ -2,7 +2,8 @@
 	<script src="static/app.bundle.js" defer></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Newsreader&display=swap" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="../src/js/handlebars_helper_if_eq.js"></script>
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1"> -->
 </head>
 
 
@@ -27,6 +28,7 @@
 				<h2 class="article__stories-title">More Stories</h2>
 				<!-- loop through posts and display all posts with corresponding id -->
 				{{#each posts}}
+					{{#if_eq {{this.category}} 3}}					
 					<div class="row post" >
 						<div class = "col-sm-3" >
 							<img class="post__image" src={{this.thumbnail}} alt={{this.title}} >
@@ -36,6 +38,8 @@
 							<h3 style="text-decoration: underline">Read More</h3>
 						</div>
 					</div>	
+					{{/if_eq}}
+					
 				{{/each}}
 			</div>
 		</div>
