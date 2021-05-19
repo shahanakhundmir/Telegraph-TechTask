@@ -12,7 +12,7 @@ app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
 app.set("meta", meta);
 app.set("article", article);
-app.set("posts", posts);
+app.set("posts", posts.posts);
 
 app.use("*/static", express.static("public"));
 

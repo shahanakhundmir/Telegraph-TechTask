@@ -1,51 +1,49 @@
+<head>
+	<script src="static/app.bundle.js" defer></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Newsreader&display=swap" rel="stylesheet">
+</head>
+
+<body>
 <div class = "container">
-{{#with article}}
+	{{#with article}}
 
-<div class="row">
-	<div
-		class="col-md-9"
-		style="border-color:blue; border-style:solid; border-width:1px"
-	><h1>{{{post.title}}}</h1>
-	<p>{{{post.standfirst}}}</p>
-	<p>{{{post.date}}}</p>
-	<img> 
-
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-8" style="border-color:blue; border-style:solid; border-width:1px">
-		<img src={{{post.image}}} alt="for the main article" width="500" height="600">
+		<div class="row">
+			<div class="col-xs-12 col-sm-offset-2 col-sm-7 " style="border-color:blue; border-style:solid; border-width:1px">
+				<h1 class="article-title">{{{post.title}}}</h1></br>
+				<h2 class="article-stand">{{{post.standfirst}}}</h2>
+				<!-- TODO truncate date to just date & time -->
+				<p class="article-date">{{{post.date}}}</p>
+		</div>
 	</div>
 
-	<div class="col-md-3 offset-md-1 posts" style="border-color:blue; border-style:solid; border-width:1px">
-		<h2>More Stories</h2>
-		{{#each posts}} 
-			{{@id}}: {{this}} 
-		{{/each}}
-		
+	<div class="row">
+		<div class="col-xs-12 col-sm-8" style="border-color:blue; border-style:solid; border-width:1px">
+			<img class = "article-image" src={{{post.image}}} alt={{{post.title}}} width="50em" height = "50em">
+		</div>
+
+		<div class="col-xs-12 col-sm-offset-1 col-sm-3  moreStories" style="border-color:blue; border-style:solid; border-width:1px">
+			<h2>More Stories</h2>
+			{{#each posts}} 
+				<h2>posts</h2>
+			<!--	{{@id}}: {{this}} -->
+			{{/each}}
+		</div>
 	</div>
-</div>
 
-<div class="row">
-	<div
-		class="col-md-6 offset-md-2"
-		style="border-color:blue; border-style:solid; border-width:1px"
-	> 
-    <p>
-		{{{post.body}}}
-	</p>
-</div>
-{{/with}}
+	<div class="row">
+		<div class="col-xs-12 col-sm-offset-2 col-sm-6" style="border-color:blue; border-style:solid; border-width:1px"> 
+			<p class="article-xx">{{{post.body}}}</p>
+		</div>
+	{{/with}}
 
-<div class="row ">
-	<div
-		class="col-md-6 offset-md-2"
-		style="border-color:blue; border-style:solid; border-width:1px"
-	> 
-	<ul class="comment_list">
-	</ul>
+	<div class="row comments">
+		<div class="col-xs-12 col-sm-offset-2 col-sm-6" style="border-color:blue; border-style:solid; border-width:1px"> 
+		<ul class="comment_list">
+		</ul>
 
+		</div>
 	</div>
-</div>
 
 </div>
+</body>
