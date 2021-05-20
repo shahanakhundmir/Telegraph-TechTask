@@ -132,7 +132,7 @@ Scenario: Order comments by likes
 
 
 
-# *Solution*
+# *Front-End Candidate Solution*
 
 📰 A full page article has been rendered
 It includes Image, Title with date and the Body of the article
@@ -154,7 +154,16 @@ have liked to have completed with more time.
 
 ### Further Unit testing has been carried out on the Related stories, these have looked at scenarios including:
 
-❇️ Are the correct number of associated stories displayed
+🟣 article.spec.js unit tests the that URL link for the article is displaying the correct page, which is defined in article.js
+
+🟣 posts.spec.js unit tests the related stories, it checks:
+
+
+	◾ Are the correct number of associated stories displayed
+
+	◾
+	
+	◾
 
 
 ## Search Engine Optimisation ⚙️
