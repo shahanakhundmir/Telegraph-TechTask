@@ -145,7 +145,7 @@ Further Unit testing has been carried out on the Related stories, these have loo
 
 📱 The design is responsive
 
-The design closely mirrors the Design that was provided
+:art: The design closely mirrors the Design that was provided
 
 
 ⏳ This was my first experience of using Handlebars and some time has been taken to become familiar with the application.
