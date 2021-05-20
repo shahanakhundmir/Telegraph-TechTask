@@ -6,32 +6,35 @@ describe("Article", () => {
 		it("should match if on article page", () => {
 			const article = new Article();
 			window.history.pushState({},"","/einstein-and-churchill-both-took-daily-naps");
-
 			expect(article.isArticlePage()).toBeTruthy();
 		});
 
 		it("should not match if on another page", () => {
 			const article = new Article();
 			window.history.pushState({}, "", "/news");
-
 			expect(article.isArticlePage()).toBeFalsy();
 		});
-	});
 
-/** checkig the number of stories returned - should be 4, category should be 3
-	describe("areStoriesRelated", () => {
-		it("should match if only related stories are returned", () => {
-			const article = new Article();
-			window.history.pushState({},"","/einstein-and-churchill-both-took-daily-naps");
-			expect(utils.areStoriesRelated()).toBeTruthy();
-		});
+        it("should match with different article page parameter", () => {
+            const article = new Article({articlePagePath: "/mainArticle",});
+            window.history.pushState({}, "", "/mainArticle");
+            expect(article.isArticlePage()).toBeTruthy();
+        });
 
-		it("should not match if unrelated stories are returned", () => {
+        it("should match if on the article page and has query parameters", () => {
             const article = new Article();
-			window.history.pushState({}, "", "/news");
-			expect(utils.areStoriesRelated()).toBeFalsy();
-		});
-	});*/
+            window.history.pushState({}, "", "/einstein-and-churchill-both-took-daily-naps/?foo=bar");
+            expect(article.isArticlePage()).toBeTruthy();
+        });
+
+        it("should match if on the article page and has hash navigation", () => {
+            const article = new Article();
+            window.history.pushState({}, "", "/einstein-and-churchill-both-took-daily-naps/#foo");
+            expect(article.isArticlePage()).toBeTruthy();
 
 
+
+            
+        });
+	});
 });

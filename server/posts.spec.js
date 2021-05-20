@@ -3,26 +3,24 @@ const {getRelatedPosts} = require("./posts");
 describe("Related Post functionality", () => {
 	
 	describe("getRelatedPosts", () => {
-		it("should match specific category", () => {
+		it("should match a specific category, 3", () => {
 			const relatedPosts = getRelatedPosts(3)
 			expect(relatedPosts.length).toBe(4);
 		});
 	});
 
-/** checkig the number of stories returned - should be 4, category should be 3
-	describe("areStoriesRelated", () => {
-		it("should match if only related stories are returned", () => {
-			const article = new Article();
-			window.history.pushState({},"","/einstein-and-churchill-both-took-daily-naps");
-			expect(utils.areStoriesRelated()).toBeTruthy();
+    describe("getRelatedPosts", () => {
+		it("should match a specific category, 2", () => {
+			const relatedPosts = getRelatedPosts(2)
+			expect(relatedPosts.length).toBe(2);
 		});
+	});
 
-		it("should not match if unrelated stories are returned", () => {
-            const article = new Article();
-			window.history.pushState({}, "", "/news");
-			expect(utils.areStoriesRelated()).toBeFalsy();
+    describe("getRelatedPosts", () => {
+		it("should not match a specific category, 12", () => {
+			const relatedPosts = getRelatedPosts(12)
+			expect(relatedPosts.length).toBe(0);
 		});
-	});*/
-
+	});
 
 });
