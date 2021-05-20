@@ -154,18 +154,18 @@ have liked to have completed with more time.
 
 ### Further Unit testing has been carried out on the Related stories, these have looked at scenarios including:
 
+🟣Run npm test to run unit testing
+
 🟣 article.spec.js unit tests the that URL link for the article is displaying the correct page, which is defined in article.js
 
 🟣 posts.spec.js unit tests the related stories, it checks:
 
 
-	◾ Are the correct number of associated stories displayed
+	◾ Are the correct number of associated stories displayed for 2 different categories
 
-	◾
+	◾ Zero matches should be found if article has no associated posts
 	
-	◾
-
-
+	
 ## Search Engine Optimisation ⚙️
 
 ☑️ The title of the article is part of the <Title> tag
