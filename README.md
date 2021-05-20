@@ -130,7 +130,7 @@ Scenario: Order comments by likes
 
 :heavy_check_mark: Feel free to send us any other additional notes. E.g. what you would have done with more time.
 
-**Solution **
+**Solution**
 
 📰 A full page article has been rendered with Image and Title, inclduing date. 
 
@@ -146,6 +146,7 @@ And I have tried my best to understand the framework and apply this to the task.
 have liked to have completed with more time. 
 
 ℹ️ **Performance** 
+
 🖥️ 📱 SEO's 
 
 **TODO**'s
