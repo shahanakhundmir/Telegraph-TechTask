@@ -129,3 +129,66 @@ Scenario: Order comments by likes
 :heavy_check_mark: Please also feedback on how you found the test - what did you like/not like about it?
 
 :heavy_check_mark: Feel free to send us any other additional notes. E.g. what you would have done with more time.
+
+
+
+# *Front-End Candidate Solution*
+
+📰 A full page article has been rendered
+It includes Image, Title with date and the Body of the article
+
+📚 Associated stories have been selected by matching category id, and these are dispalyed on the page
+
+💬 The Comments for the article appear below the main article
+
+📱 The design is responsive
+
+:art: The design closely mirrors the Design that was provided
+
+⏳ This was my first experience of using Handlebars and some time has been taken to become familiar with the application.
+And I have tried my best to understand the framework and apply this to the task. I am aware of some shortfalls, which I would 
+have liked to have completed with more time.
+
+
+## Unit testing has ben carried out using TDD. Checking that the Article is being displayed at the given URL ✔️ ⭕
+
+### Further Unit testing has been carried out on the Related stories, these have looked at scenarios including:
+
+🟣Run npm test to run unit testing
+
+🟣 article.spec.js unit tests the that URL link for the article is displaying the correct page, which is defined in article.js
+
+🟣 posts.spec.js unit tests the related stories, it checks:
+
+
+	◾ Are the correct number of associated stories displayed for 2 different categories
+
+	◾ Zero matches should be found if article has no associated posts
+	
+	
+## Search Engine Optimisation ⚙️
+
+☑️ The title of the article is part of the <Title> tag
+	
+☑️ Description, Viewport and Content-type <meta> tags are included
+	
+☑️ Only one h1 tag is used and it matches the <title> And subsequent header tags are used in descending order
+
+☑️ <Alt> tags are used on all images for descriptions for screen readers
+	
+
+
+## TODO's
+	
+### With more time, all the things that I would do: 
+
+✨ Imporve the responsive design to produce a more sleek transfer from mobile to laptop
+
+✨ Fix any issues with images not fitting inside their containers
+
+✨ Add the sorting function fo rthe comments to order by date and likes. 
+
+✨ Fix the ordering of items in mobile view
+
+✨	
+
