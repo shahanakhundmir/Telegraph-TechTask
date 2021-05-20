@@ -129,3 +129,25 @@ Scenario: Order comments by likes
 :heavy_check_mark: Please also feedback on how you found the test - what did you like/not like about it?
 
 :heavy_check_mark: Feel free to send us any other additional notes. E.g. what you would have done with more time.
+
+**Solution **
+
+📰 A full page article has been rendered with Image and Title, inclduing date. 
+📚 Associated stories have been selected by matching category id, and these are dispalyed on the page
+✔️ ⭕ Unit testing has ben carried out using TDD. Checking that the Article is being displayed at the given URL
+Further Unit testing has been carried out on the Related stories, these have looked at scenarios including:
+❇️ Are the correct number of associated stories displayed
+
+⏳ This was my first experience of using Handlebars and some time has been taken to become familiar with the application.
+And I have tried my best to understand the framework and apply this to the task. I am aware of some shortfalls, which I would 
+have liked to have completed with more time. 
+
+ℹ️ **Performance** 
+🖥️ 📱 SEO's 
+
+**TODO**'s
+	
+
+
+
+
