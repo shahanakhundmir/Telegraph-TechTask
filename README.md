@@ -158,8 +158,11 @@ have liked to have completed with more time.
 With more time, all the things that I would do: 
 
 ✨ Imporve the responsive design to produce a more sleek transfer from mobile to laptop
+
 ✨ Fix any issues with images not fitting inside their containers
+
 ✨ Add the sorting function fo rthe comments to order by date and likes. 
+
 ✨
 ✨	
 
