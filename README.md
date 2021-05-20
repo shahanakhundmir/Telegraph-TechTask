@@ -145,14 +145,26 @@ Further Unit testing has been carried out on the Related stories, these have loo
 
 📱 The design is responsive
 
+The design closely mirrors the Design that was provided
+
 
 ⏳ This was my first experience of using Handlebars and some time has been taken to become familiar with the application.
 And I have tried my best to understand the framework and apply this to the task. I am aware of some shortfalls, which I would 
 have liked to have completed with more time. 
 
-ℹ️ **Performance** 
 
-🖥️  SEO's 
+⚙️  **Search Engine Optimisation **
+
+☑️ The title of the article is part of the <Title> tag
+	
+☑️ Description, Viewport and Content-type <meta> tags are included
+	
+☑️ Only 1 <h1> tag is used and it matches the <title>
+	And subsequent header tags are used in descending order
+
+☑️ <Alt> tags are used on all images for descriptions for screen readers
+	
+
 
 **TODO**'s
 With more time, all the things that I would do: 
@@ -163,7 +175,8 @@ With more time, all the things that I would do:
 
 ✨ Add the sorting function fo rthe comments to order by date and likes. 
 
-✨
+✨ Fix the ordering of items in mobile view
+
 ✨	
 
 
