@@ -132,13 +132,18 @@ Scenario: Order comments by likes
 
 **Solution**
 
-📰 A full page article has been rendered with Image and Title, inclduing date. 
+📰 A full page article has been rendered
+It includes Image, Title with date and the Body of the article
 
 📚 Associated stories have been selected by matching category id, and these are dispalyed on the page
+
+💬 The Comments for the article appear below the main article
 
 ✔️ ⭕ Unit testing has ben carried out using TDD. Checking that the Article is being displayed at the given URL
 Further Unit testing has been carried out on the Related stories, these have looked at scenarios including:
 ❇️ Are the correct number of associated stories displayed
+
+📱 The design is responsive
 
 
 ⏳ This was my first experience of using Handlebars and some time has been taken to become familiar with the application.
@@ -147,10 +152,16 @@ have liked to have completed with more time.
 
 ℹ️ **Performance** 
 
-🖥️ 📱 SEO's 
+🖥️  SEO's 
 
 **TODO**'s
-	
+With more time, all the things that I would do: 
+
+✨ Imporve the responsive design to produce a more sleek transfer from mobile to laptop
+✨ Fix any issues with images not fitting inside their containers
+✨ Add the sorting function fo rthe comments to order by date and likes. 
+✨
+✨	
 
 
 
