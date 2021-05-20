@@ -4,6 +4,8 @@ const router = require("./router");
 const meta = require("./content/meta.json");
 const article = require("./content/article.json");
 const posts = require("./content/posts.json");
+//const comments = require("../src/js/getComments");
+
 
 const app = express();
 const port = 3000;
@@ -13,6 +15,7 @@ app.set("view engine", "handlebars");
 app.set("meta", meta);
 app.set("article", article);
 app.set("posts", posts.posts);
+//app.set("comments", comments.comments);
 
 app.use("*/static", express.static("public"));
 

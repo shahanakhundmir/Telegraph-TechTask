@@ -9,6 +9,7 @@ router.get("/einstein-and-churchill-both-took-daily-naps", (req, res) => {
 	res.render("article", {
 		article: req.app.get("article"),
 		posts: req.app.get("posts"),
+		//comments:req.app.get("comments"),
 	});
 });
 

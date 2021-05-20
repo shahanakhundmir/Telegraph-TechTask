@@ -1,11 +1,3 @@
-<head>
-	<script src="static/app.bundle.js" defer></script>
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Newsreader&display=swap" rel="stylesheet">
-	<script src="../src/js/handlebars_helper_if_eq.js"></script>
-	<!--<meta name="viewport" content="width=device-width, initial-scale=1"> -->
-</head>
-
 
 <div class = "container">
 
@@ -14,7 +6,8 @@
 				<h1 class="article__title">{{{article.post.title}}}</h1></br>
 				<h2 class="article__stand">{{{article.post.standfirst}}}</h2>
 
-				<!-- TODO truncate date to just date & time -->
+				{{!TODO truncate date to just date & time using a helper function 
+				and taking slice of date String }}
 				<h3 class="article__date">{{{article.post.date}}}</h3>
 			</div>
 		</div>
@@ -26,9 +19,10 @@
 
 			<div class="col-xs-12 col-sm-offset-1 col-sm-3 article__stories">
 				<h2 class="article__stories-title">More Stories</h2>
-				<!-- loop through posts and display all posts with corresponding id -->
+				{{!loop through posts and display all posts with corresponding id 
+				TODO change 3 to {{{article.post.category}}
 				{{#each posts}}
-					{{#if_eq {{this.category}} 3}}					
+					{{!#if_eq 3 3}}
 					<div class="row post" >
 						<div class = "col-sm-3" >
 							<img class="post__image" src={{this.thumbnail}} alt={{this.title}} >
@@ -38,22 +32,22 @@
 							<h3 style="text-decoration: underline">Read More</h3>
 						</div>
 					</div>	
-					{{/if_eq}}
-					
+					{{!/if_eq}}
 				{{/each}}
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-xs-12 col-sm-offset-2 col-sm-6 article__body" style="border-color:blue; border-style:solid; border-width:1px"> 
-				<p>{{{article.post.body}}}</p>
+			<div class="col-xs-12 col-sm-offset-2 col-sm-6 article__body" > 
+				{{{article.post.body}}}
 			</div>
 		</div>
 	
 		<div class="row">
 			<div class="col-xs-12 col-sm-offset-2 col-sm-6 article__comments" style="border-color:blue; border-style:solid; border-width:1px">
-				<p>This is some comment text</p> 
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, omnis quam? Nemo asperiores, ratione maxime temporibus aperiam velit illum dolores non aliquam culpa quia quos explicabo, eum pariatur, exercitationem quibusdam!</p> 
+				<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint architecto ut ratione placeat magnam velit inventore voluptates error aut cumque temporibus, ea illum laboriosam, modi mollitia veniam ab reprehenderit qui.</p>
 			</div>
 		</div>
-
 </div>
+

@@ -1,7 +1,9 @@
-Handlebars.registerHelper('if_eq', function(a, b, opts) {
+Handlebars.registerHelper("if_eq", function(a, b, options) {
     if (a == b) {
-        return opts.fn(this);
+    
+        return options.fn(this);
     } else {
-        return opts.inverse(this);
+     
+        return options.inverse(this);
     }
 });
