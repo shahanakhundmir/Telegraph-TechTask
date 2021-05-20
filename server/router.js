@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const {getRelatedPosts} = require("./posts");
 
 router.get("/", (req, res) => {
 	res.render("home", { posts: req.app.get("posts") });
@@ -9,9 +10,8 @@ router.get("/einstein-and-churchill-both-took-daily-naps", (req, res) => {
 	const article = req.app.get("article");
 
 	// filter related stories by the articles category
-	const relatedStories = req.app.get("posts").filter(post=>
-		post.category === article.post.category)
-	
+	const relatedStories = getRelatedPosts(article.post.category)
+
 	res.render("article", {
 		article: article,
 		posts: relatedStories,

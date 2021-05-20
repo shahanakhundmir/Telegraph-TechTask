@@ -8,6 +8,9 @@
 
 module.exports = HelloComments => {
     fetch("https://my-json-server.typicode.com/telegraph/frontend-exercise/comments.json")
-  		.then(data => {})
+  		.then(data => {
+console.log(data)
+
+		  })
 		.catch(error => {});
 }
