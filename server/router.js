@@ -12,16 +12,19 @@ router.get("/einstein-and-churchill-both-took-daily-naps", (req, res) => {
 	const relatedStories = req.app.get("posts").filter(post=>
 		post.category === article.post.category)
 	
-	const totalComments =  req.app.get("comments").length
-
-	
-	
 	res.render("article", {
 		article: article,
 		posts: relatedStories,
 		comments:req.app.get("comments"),
-		totalComments : totalComments
+		//comments: getArticleComments,
 	});
 });
 
+/**function getArticleComments() {
+
+	fetch("https://my-json-server.typicode.com/telegraph/frontend-exercise/comments.json")
+  		.then(data => {})
+		.catch(error => {});
+}
+**/
 module.exports = router;
