@@ -52,6 +52,8 @@ p {
 .post{
     padding: 5px;
     border-bottom: 1px solid slategray;
+    display: flex;
+    align-items: center;
 }
 
 .post__image{
@@ -63,7 +65,32 @@ p {
 }
 
 .post__title{
-vertical-align: middle; 
+    vertical-align: middle; 
+    margin-left: 5px;
+}
+
+.comments__header{
+    font-family: 'Newsreader', serif;
+	font-size:1em;
+    font-weight:bold;
+    justify-content: left;
+    padding : 2px;
+}
+
+.comment__row {
+    border-bottom: solid 1px slategray;
+    border-top: solid 1px slategray;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.comment{
+    padding-top: 5px;
+    border-bottom: solid 1px slategray;
+    display: flex;
+    align-items: center;
+   
 }
 
 

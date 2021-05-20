@@ -52,4 +52,22 @@ describe("Utils", () => {
 			expect(utils.isArticlePage()).toBeFalsy();
 		});
 	});
+/** checkig the number of stories returned - should be 4, category should be 3
+	describe("areStoriesRelated", () => {
+		it("should match if only related stories are returned", () => {
+			const utils = new Utils();
+			window.history.pushState(
+				{},
+				"",
+				"/einstein-and-churchill-both-took-daily-naps"
+			);
+			expect(utils.areStoriesRelated()).toBeTruthy();
+		});
+
+		it("should not match if unrelated stories are returned", () => {
+			const utils = new Utils();
+			window.history.pushState({}, "", "/news");
+			expect(utils.areStoriesRelated()).toBeFalsy();
+		});
+	});*/
 });
