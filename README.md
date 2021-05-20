@@ -130,7 +130,9 @@ Scenario: Order comments by likes
 
 :heavy_check_mark: Feel free to send us any other additional notes. E.g. what you would have done with more time.
 
-**Solution**
+
+
+# *Solution*
 
 📰 A full page article has been rendered
 It includes Image, Title with date and the Body of the article
@@ -139,35 +141,37 @@ It includes Image, Title with date and the Body of the article
 
 💬 The Comments for the article appear below the main article
 
-✔️ ⭕ Unit testing has ben carried out using TDD. Checking that the Article is being displayed at the given URL
-Further Unit testing has been carried out on the Related stories, these have looked at scenarios including:
-❇️ Are the correct number of associated stories displayed
-
 📱 The design is responsive
 
 :art: The design closely mirrors the Design that was provided
 
-
 ⏳ This was my first experience of using Handlebars and some time has been taken to become familiar with the application.
 And I have tried my best to understand the framework and apply this to the task. I am aware of some shortfalls, which I would 
-have liked to have completed with more time. 
+have liked to have completed with more time.
 
 
-⚙️  **Search Engine Optimisation **
+## Unit testing has ben carried out using TDD. Checking that the Article is being displayed at the given URL ✔️ ⭕
+
+### Further Unit testing has been carried out on the Related stories, these have looked at scenarios including:
+
+❇️ Are the correct number of associated stories displayed
+
+
+## Search Engine Optimisation ⚙️
 
 ☑️ The title of the article is part of the <Title> tag
 	
 ☑️ Description, Viewport and Content-type <meta> tags are included
 	
-☑️ Only 1 <h1> tag is used and it matches the <title>
-	And subsequent header tags are used in descending order
+☑️ Only one h1 tag is used and it matches the <title> And subsequent header tags are used in descending order
 
 ☑️ <Alt> tags are used on all images for descriptions for screen readers
 	
 
 
-**TODO**'s
-With more time, all the things that I would do: 
+## TODO's
+	
+### With more time, all the things that I would do: 
 
 ✨ Imporve the responsive design to produce a more sleek transfer from mobile to laptop
 
@@ -178,7 +182,4 @@ With more time, all the things that I would do:
 ✨ Fix the ordering of items in mobile view
 
 ✨	
-
-
-
 
