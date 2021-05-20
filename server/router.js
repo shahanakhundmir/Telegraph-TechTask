@@ -18,6 +18,8 @@ router.get("/einstein-and-churchill-both-took-daily-naps", (req, res) => {
 		comments:req.app.get("comments"),
 		//comments: getArticleComments,
 	});
+
+	
 });
 
 /**function getArticleComments() {

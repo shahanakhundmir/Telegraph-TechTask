@@ -1,81 +1,75 @@
 
 <div class = "container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-offset-2 col-sm-7 article__header">
+			<h1 class="article__title">{{{article.post.title}}}</h1></br>
+			<h2 class="article__stand">{{{article.post.standfirst}}}</h2>
+			{{!TODO truncate date to just date & time using a helper function and taking slice of date String }}
+			<h3 class="article__date">{{dateFormat article.post.date "dddd, MMMM Do YYYY, h:mm a"}}</h3>			
+		</div>
+	</div>
 
-		<div class="row">
-			<div class="col-xs-12 col-sm-offset-2 col-sm-7 article__header">
-				<h1 class="article__title">{{{article.post.title}}}</h1></br>
-				<h2 class="article__stand">{{{article.post.standfirst}}}</h2>
-
-				{{!TODO truncate date to just date & time using a helper function 
-				and taking slice of date String }}
-				<h3 class="article__date">{{{article.post.date}}}</h3>
-			</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-8 image">
+			<img  class = "article__image" src={{{article.post.image}}} alt={{{article.post.title}}} >
 		</div>
 
-		<div class="row">
-			<div class="col-xs-12 col-sm-8" style="border-color:blue; border-style:solid; border-width:1px">
-				<img  class = "article__image" src={{{article.post.image}}} alt={{{article.post.title}}} >
-			</div>
-
-			<div class="col-xs-12 col-sm-offset-1 col-sm-3 article__stories">
-				<h2 class="article__stories-title">More Stories</h2>
-				
-				{{#each posts}}
-					<div class="row post" >
-						<div class = "col-sm-3" >
-							<img class="post__image" src={{this.thumbnail}} alt={{this.title}} >
-						</div>
-						<div class =" col-sm-9" >
-							<h4 class="post__title">{{this.title}}</h4><br>
-							<h3 style="text-decoration: underline">Read More</h3>
-						</div>
-					</div>	
-				{{/each}}
-			</div>
+		<div class="col-xs-12 col-sm-offset-1 col-sm-3 article__stories">
+			<h2 class="article__stories-title">More Stories</h2>
+			{{#each posts}}
+				<article class="row post" >
+					<div class = "col-sm-4" >
+						<img class="post__image" src={{this.thumbnail}} alt={{this.title}} >
+					</div>
+					<div class =" col-sm-8" >
+						<h4 class="post__title">{{this.title}}</h4>
+						<h4 class="post__title" style="text-decoration: underline">Read More</h4>
+					</div>
+				</article>	
+			{{/each}}
 		</div>
+	</div>
 
-		<div class="row">
-			<div class="col-xs-12 col-sm-offset-2 col-sm-6 article__body" > 
-				{{{article.post.body}}}
-			</div>
+	<div class="row body">
+		<div class="col-xs-12 col-sm-offset-2 col-sm-6 article__body" > 
+			{{{article.post.body}}}
 		</div>
+	</div>
 	
-		<div class="row">
-			<div class="col-xs-12 col-sm-offset-2 col-sm-6 article__comments">
-				<div class="row comment__row">
-					<div class="col-sm-2">
-						<img class ="comments__icon" src="./src/images/comments-16.png" alt="messages icon" >
-					</div>
-					<div class=" col-sm-2 comments__header">
-						{{HelloComments.length}}
-					</div>
-					<div class="col-xs-offset-1 col-sm-2 comments__header">
-						<h3 >Comments</h3>
-					</div>
+	<div class="row comments">
+		<div class="col-xs-12 col-sm-offset-2 col-sm-6 article__comments">
+			<div class="row comment__row">
+				<div class="col-sm-2">
+					<img class ="comments__icon" src="./src/images/153178-200.png" alt="comments icon">
 				</div>
-
-				{{#each HelloComments}}
-				{{! displpay each comment}}
-				<div class="row comment">
-					<div class = " col">
-						<div class="row">
-							<div class = "col-xs-10">
-								<h4 style = "font-weight: bold;">{{this.name}}   {{this.date}}</h4>
-							</div>
-							<div class = "col-xs-2">
-								<h4 style = "font-weight: bold; text-align:right;">{{this.likes}} Likes</h4>
-							</div>
-						</div>
-						<div class="row">
-							<div class = "col-xs-12">
-								<p>{{this.body}}</p>
-							</div>
-						</div>
-					</div>
+				<div class=" col-sm-2 comments__header">
+					{{comments.length}}
 				</div>
-				{{/each}}
-
+				<div class="col-xs-offset-1 col-sm-2 comments__header">
+					<h3>Comments</h3>
+				</div>
 			</div>
+
+			{{#each comments}}
+			<article class="row comment">
+				<div class = "col">
+					<div class="row">
+						<div class = "col-xs-10">
+							<h4 style="font-weight: bold;">{{this.name}}   {{dateFormat this.date "MMMM Do YYYY, h:mm a"}}</h4>
+						</div>
+						<div class = "col-xs-2">
+							<h4 style = "font-weight: bold; text-align:right;">{{this.likes}} Likes</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class = "col-xs-12">
+							<p class="comment__body">{{this.body}}</p>
+						</div>
+					</div>
+				</div>
+			</article>
+			{{/each}}
 		</div>
+	</div>
 </div>
 

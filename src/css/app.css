@@ -1,6 +1,10 @@
 @import 'core/reset.css';
 @import 'elements/site-logo.css';
 
+.container{
+    padding: 20px;
+    display:inline-block
+}
 
 .article__title{
     font-family: 'Newsreader', serif;
@@ -20,7 +24,6 @@
     padding-top: 5px;
 }
 
- 
 .article__stories-title{
     font-family: 'Newsreader', serif;
 	font-size: 1.3em;
@@ -33,20 +36,20 @@
     font-family: 'Newsreader', serif;
 }
 
-p {
+p{
     text-align: justify;
     letter-spacing: 1px;
     font-size: 1rem;
     line-height:1.3;
     margin-top:0;
     margin-bottom: 16px;
-  }
+}
 
 .article__image{
     padding: 8px;
-    height: 400px;
-    max-width: 500px;
-    object-fit: contain;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .post{
@@ -54,6 +57,7 @@ p {
     border-bottom: 1px solid slategray;
     display: flex;
     align-items: center;
+    justify-content: left;
 }
 
 .post__image{
@@ -61,23 +65,27 @@ p {
     padding: 2px;
     height:50px;
     width: 50px; 
-    object-fit: contain;
+    display: flex;
+    align-items: center;
+    
 }
 
 .post__title{
-    vertical-align: middle; 
-    margin-left: 5px;
+    margin: 5px;
+    margin-left : 10px;
+    display: flex;
+    align-items: center;
 }
 
 .comments__header{
     font-family: 'Newsreader', serif;
-	font-size:1em;
     font-weight:bold;
     justify-content: left;
-    padding : 2px;
+    padding-bottom : 5px;
 }
 
 .comment__row {
+    font-family: 'Newsreader', serif;
     border-bottom: solid 1px slategray;
     border-top: solid 1px slategray;
     display: flex;
@@ -85,14 +93,25 @@ p {
     height: 40px;
 }
 
+.comment__body{
+    margin-bottom: 0px;
+}
+
 .comment{
-    padding-top: 5px;
+    padding: 10px;
     border-bottom: solid 1px slategray;
     display: flex;
     align-items: center;
-   
 }
 
+@media screen and (max-width: 531px) {
+    .container { display: flex; flex-flow: column; }
+    .image { order: 1; }
+    .article__header { order: 2;  }
+    .body { order: 3; }
+    .comments { order: 4; }
+    .article__stories { order: 5; }
+}
 
 
 

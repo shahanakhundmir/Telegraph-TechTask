@@ -26,15 +26,11 @@ describe("Article", () => {
             window.history.pushState({}, "", "/einstein-and-churchill-both-took-daily-naps/?foo=bar");
             expect(article.isArticlePage()).toBeTruthy();
         });
-
+        
         it("should match if on the article page and has hash navigation", () => {
             const article = new Article();
             window.history.pushState({}, "", "/einstein-and-churchill-both-took-daily-naps/#foo");
             expect(article.isArticlePage()).toBeTruthy();
-
-
-
-            
         });
 	});
 });
