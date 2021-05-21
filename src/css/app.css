@@ -3,7 +3,6 @@
 
 .container{
     padding: 20px;
-    display:inline-block
 }
 
 .article__title{
@@ -28,7 +27,6 @@
     font-family: 'Newsreader', serif;
 	font-size: 1.3em;
 	font-weight:bold;
-	text-decoration: underline;
     padding-bottom: 5px;
 }
 
@@ -67,7 +65,6 @@ p{
     width: 50px; 
     display: flex;
     align-items: center;
-    
 }
 
 .post__title{
@@ -107,7 +104,8 @@ p{
 TODO: fix the mobile view ordering   */
 
 @media screen and (max-width: 531px) {
-    .container { display: flex; flex-flow: column; }
+    .container { display: flex; 
+        flex-direction: column; }
     .image { order: 1; }
     .article__header { order: 2;  }
     .body { order: 3; }
