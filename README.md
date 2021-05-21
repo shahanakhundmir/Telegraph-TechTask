@@ -1,72 +1,83 @@
 # *Front-End Candidate Solution*
 
-📰 A full page article has been rendered
-It includes Image, Title with Date and the Body of the article
+📰 A full page article has been rendered. It includes Image, Title with formatted Date and the Body of the article.
 
-📚 Associated stories have been selected by matching category id, and these are dispalyed on the page
+📚 Associated stories have been selected by matching category id, and these are dispalyed on the page.
 
-💬 The Comments for the article appear below the main article
+💬 The Comments for the article appear below the main article.
 
-📱 The design is responsive
+📱 The design is responsive.
 
-:art: The design closely mirrors the Design that was provided
+:art: The design closely mirrors the design that was provided.
 
-📅 Dates have been converted to readable format
+📅 Dates have been converted to a readable format.
+
+💻 The comments data is being loaded from an endpoint in server/app.js.
 
 ⏳ This was my first experience of using Handlebars and some time has been taken to become familiar with the application.
 And I have tried my best to understand the framework and apply this to the task. I am aware of some shortfalls, which I would 
 have liked to have completed with more time.
 
-💻 The comments data is being loaded from an endpoint in app.js
-
 
 ## ✔️ ⭕Unit testing has ben carried out using TDD. 
 
-### Unit testing has been carried out on the article and related stories, these have looked at scenarios including:
+### Unit testing has been carried out on the article and related stories.
 
-🟣 Testing has been done using Jest, all tests are passing
+🟣 Testing has been done using Jest, all tests are passing.
 
-🟣 Run npm test to run unit testing
+🟣 Run npm test to run unit testing.
 
-🟣 article.spec.js unit tests the that URL link for the article is displaying the correct page, which is defined in article.js
+## these have looked at scenarios including:
+
+🟣 article.spec.js unit tests that the URL link for the article is displaying the correct page, which is defined in article.js.
 
 🟣 posts.spec.js unit tests the related stories, it checks:
 
 
-	◾ Are the correct number of associated stories displayed for 2 different categories
+	◾ Are the correct number of associated stories displayed for 2 different categories.
 
-	◾ Zero matches should be found if article has no associated posts
+	◾ Zero matches should be found if the article has no associated posts.
 	
 	
 ## Search Engine Optimisation ⚙️
 
-☑️ The title of the article is part of the <title> tag
+☑️ The title of the article is part of the <title> tag.
 	
-☑️ Description, Viewport and Content-type <meta> tags are included
+☑️ Description, Viewport and content-type meta-tags are included.
 	
-☑️ Only one h1 tag is used and it matches the <title> And subsequent header tags are used in descending order
+☑️ Only one h1 tag is used and it matches the <title> And subsequent header tags are used in ascending order.
 
-☑️ <alt> tags are used on all images for descriptions for screen readers
+☑️ alt tags are used on all images for descriptions for screen readers.
 	
 <img width="258" alt="lighthouse" src="https://user-images.githubusercontent.com/58731479/119054100-fb8a4600-b9be-11eb-9fb5-3c9d1fdf83e6.png">
 	
 ## Clean code
 
-Use of BEM naming convention for CSS styling
+Use of BEM naming convention for CSS styling.
 
 
 ## TODO's
 	
 ### With more time, all the things that I would do: 
 
-✨ Imporve the responsive design to produce a more sleek transfer from mobile to laptop
+✨ Improve the responsive design to produce a more sleek transfer from mobile to laptop.
 	
-✨ Getting the Comments data via an endpoint on the front-end
+✨ Getting the Comments data via an endpoint on the front-end.
+	
+I investigated the approach for loading data dynamically on the front-end using 'await fetch'. This data
+	could then be used to populate a HTML structure which is done once the DOM has been loaded. 
+	As my knowldge and experinece of this approach is limited I chose not to implement it. With more time 
+	and help to undertsand this more clearly I would feel more comfortable to use it. 
+	
+✨ Add the sorting function for the comments to order by date and likes. I have investigated the use of the SortBy 
+	helper function to do this, and think it may be used with the #each helper function, so sort and iterate
+	over the comments array. Handlebars-helper functions were installed but I was unable to import & use them 
+	to achieve the desired reults. 
 
-✨ Add the sorting function for the comments to order by date and likes. 
+✨ Fix the ordering of items in mobile view. I have attempted to use a media query with ordering to change the 
+	layout of sections are per the AC for mobile view, but was unable to get this to work. 
 
-✨ Fix the ordering of items in mobile view
-
+✨ Extend testing to the sort functions and calls for the comments section.
 	
 
 
