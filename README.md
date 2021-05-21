@@ -17,6 +17,8 @@ It includes Image, Title with Date and the Body of the article
 And I have tried my best to understand the framework and apply this to the task. I am aware of some shortfalls, which I would 
 have liked to have completed with more time.
 
+💻 The comments data is being loaded from an endpoint in app.js
+
 
 ## ✔️ ⭕Unit testing has ben carried out using TDD. 
 
@@ -61,11 +63,10 @@ Use of BEM naming convention for CSS styling
 	
 ✨ Getting the Comments data via an endpoint on the front-end
 
-✨ Add the sorting function fo the comments to order by date and likes. 
+✨ Add the sorting function for the comments to order by date and likes. 
 
 ✨ Fix the ordering of items in mobile view
 
-✨ Message icon for comments section is not displaying correctly
 	
 
 
