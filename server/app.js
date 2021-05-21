@@ -6,8 +6,16 @@ const meta = require("./content/meta.json");
 const article = require("./content/article.json");
 const posts = require("./content/posts.json");
 const comments = require("../db.json");
+const fetch = require('node-fetch');
 
 hbs.registerHelper('dateFormat', require('handlebars-dateformat'));
+
+fetch('https://my-json-server.typicode.com/telegraph/frontend-exercise/comments')
+  .then(response => response.json())
+  .then(data => {
+    app.set("comments", data);
+  })
+  .catch(err => console.log(err))
 
 const app = express();
 const port = 3000;
@@ -17,7 +25,7 @@ app.set("view engine", "handlebars");
 app.set("meta", meta);
 app.set("article", article);
 app.set("posts", posts.posts);
-app.set("comments", comments.comments);
+//app.set("comments", comments.comments);
 
 app.get('/', function (req, res) {
     res.render('article', { now: new Date() });
@@ -30,15 +38,4 @@ app.use(router);
 app.listen(port, () => console.log(`Listening on port ${port}!`));
 
 
-//var hbs = require('hbs');
-//var express = require('express');
 
-//hbs.registerHelper('dateFormat', require('handlebars-dateformat'));
-
-//var app = express();
-
-//app.set('view engine', 'hbs');    
-
-
-
-//app.listen(3000);

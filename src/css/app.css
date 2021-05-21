@@ -103,6 +103,8 @@ p{
     display: flex;
     align-items: center;
 }
+/* This media should change the order of elements for teh mobile view 
+TODO: fix the mobile view ordering   */
 
 @media screen and (max-width: 531px) {
     .container { display: flex; flex-flow: column; }

@@ -2,9 +2,8 @@
 <div class = "container">
 	<div class="row">
 		<div class="col-xs-12 col-sm-offset-2 col-sm-7 article__header">
-			<h1 class="article__title">{{{article.post.title}}}</h1></br>
+			<h1 class="article__title">{{{article.post.title}}}</h1><br>
 			<h2 class="article__stand">{{{article.post.standfirst}}}</h2>
-			{{!TODO truncate date to just date & time using a helper function and taking slice of date String }}
 			<h3 class="article__date">{{dateFormat article.post.date "dddd, MMMM Do YYYY, h:mm a"}}</h3>			
 		</div>
 	</div>
@@ -39,10 +38,10 @@
 	<div class="row comments">
 		<div class="col-xs-12 col-sm-offset-2 col-sm-6 article__comments">
 			<div class="row comment__row">
-				<div class="col-sm-2">
-					<img class ="comments__icon" src="./src/images/153178-200.png" alt="comments icon">
+				<div class="col-sm-1">
+					<img class ="comments__icon" src="https://img-premium.flaticon.com/png/512/304/304498.png?token=exp=1621577142~hmac=b401e4d6c4c8821743145a6f7783fddb" style="height: 35px; width=35px; " alt="comments icon">
 				</div>
-				<div class=" col-sm-2 comments__header">
+				<div class=" col-xs-offset-1 col-sm-1 comments__header">
 					{{comments.length}}
 				</div>
 				<div class="col-xs-offset-1 col-sm-2 comments__header">

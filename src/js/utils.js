@@ -13,7 +13,6 @@ class Utils {
 			},
 			params
 		);
-
 	}
 
 	/**
@@ -22,9 +21,7 @@ class Utils {
 	 */
 	isHomePage() {
 		return document.location.pathname === this.params.homePagePath;
-
 	}
-
 }
 
 module.exports = Utils;
