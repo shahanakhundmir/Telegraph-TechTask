@@ -22,7 +22,7 @@
 					</div>
 					<div class =" col-sm-8" >
 						<h4 class="post__title">{{this.title}}</h4>
-						<h4 class="post__title" style="text-decoration: underline">Read More</h4>
+						<h4 class="post__title"><a href="">Read More</a></h4>
 					</div>
 				</article>	
 			{{/each}}
@@ -44,10 +44,18 @@
 				<div class=" col-xs-offset-1 col-sm-1 comments__header">
 					{{comments.length}}
 				</div>
-				<div class="col-xs-offset-1 col-sm-2 comments__header">
+				<div class="col-xs-offset-1 col-sm-4 comments__header">
 					<h3>Comments</h3>
 				</div>
+				<div class="col-xs-offset-1 col-sm-3 comments__header">
+					<h3>Sort by: <a href="">likes</a>		<a href="">date</a></h3>
+				</div>
 			</div>
+
+			{{!{#withSort Orders "Number" sortBy="asc"
+			#withSort Orders "Number" sortBy="desc"}}
+			
+
 
 			{{#each comments}}
 			<article class="row comment">

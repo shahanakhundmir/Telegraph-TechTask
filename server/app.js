@@ -5,20 +5,22 @@ const router = require("./router");
 const meta = require("./content/meta.json");
 const article = require("./content/article.json");
 const posts = require("./content/posts.json");
-const comments = require("../db.json");
+//const comments = require("../db.json");
 const fetch = require('node-fetch');
+const app = express();
+const port = 3000;
 
-hbs.registerHelper('dateFormat', require('handlebars-dateformat'));
-
+// Fetching endpoint json file using node-fetch
 fetch('https://my-json-server.typicode.com/telegraph/frontend-exercise/comments')
   .then(response => response.json())
   .then(data => {
-    app.set("comments", data);
+       // console.log(data)
+        app.set("comments", data);
   })
   .catch(err => console.log(err))
 
-const app = express();
-const port = 3000;
+hbs.registerHelper('dateFormat', require('handlebars-dateformat'));
+
 
 app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
